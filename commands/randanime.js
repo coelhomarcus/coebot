@@ -10,8 +10,8 @@ module.exports = {
                 .setDescription('Escolha entre conteúdo SFW ou NSFW')
                 .setRequired(true)
                 .addChoices(
-                    { name: 'SFW (Seguro)', value: 'sfw' },
-                    { name: 'NSFW (+18)', value: 'nsfw' }
+                    { name: 'SFW', value: 'sfw' },
+                    { name: 'NSFW', value: 'nsfw' }
                 )),
 
     async execute(interaction) {
@@ -20,7 +20,6 @@ module.exports = {
         try {
             const tipo = interaction.options.getString('tipo');
 
-            // Endpoints da API waifu.pics
             const sfwEndpoints = [
                 'waifu', 'neko', 'shinobu', 'megumin', 'bully', 'cuddle',
                 'cry', 'hug', 'awoo', 'kiss', 'lick', 'pat', 'smug',

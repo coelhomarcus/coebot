@@ -35,7 +35,26 @@ module.exports = {
                 "Abri a geladeira com esperança de encontrar uma poção de mana. Só tinha brócolis.",
                 "Meu humor muda mais rápido que transformação de Sailor Moon.",
                 "Tentei usar um Hadouken no colega chato... agora tô no RH explicando.",
-                "Tô igual o Yugi: tenho dois lados, o sério e o que faz piada com tudo."
+                "Tô igual o Yugi: tenho dois lados, o sério e o que faz piada com tudo.",
+                "Queria ser um personagem de RPG só para poder salvar o jogo antes de falar algo importante.",
+                "Meu orçamento tá igual barra de vida em Dark Souls: crítico o tempo todo.",
+                "Se alguém me perguntar se tá tudo bem, vou responder com sons de Skyrim.",
+                "Tô com mais bugs que um jogo da Bethesda no lançamento.",
+                "Minha paciência tem menos XP que um personagem nível 1.",
+                "Juro que ouvi a música de batalha do Pokémon quando meu chefe me chamou na sala dele.",
+                "Às vezes sinto que sou um NPC na vida dos outros.",
+                "Queria um mini-mapa da vida igual tem nos jogos. Nunca sei onde tô indo.",
+                "Fiz um café tão forte hoje que ganhou battle power de Super Saiyajin.",
+                "Tenho tanto sono que nem uma poção de MP Full ia resolver.",
+                "Quando levanto da cadeira meus joelhos fazem o mesmo barulho que os ossos do Sans.",
+                "Comecei a chamar meus problemas de 'side quests' para ficarem mais interessantes.",
+                "Às vezes me sinto o Naruto: falando muito e fazendo pouco.",
+                "Minha memória tem menos espaço livre que um Memory Card de PS1.",
+                "Queria que a vida tivesse DLC pra eu escolher só as partes boas.",
+                "Toda segunda-feira é igual lutar contra o boss final sem ter feito nenhuma missão secundária.",
+                "Tô tão cansado que se fosse um Sims, minha barra de energia estaria vermelha.",
+                "Preciso de um power-up urgente ou vou falhar na fase 'acordar cedo'.",
+                "Se a vida tivesse achievements, eu estaria caçando os mais fáceis."
             ];
 
             const pensamentoAleatorio = pensamentos[Math.floor(Math.random() * pensamentos.length)];

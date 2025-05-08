@@ -10,7 +10,6 @@ module.exports = {
         await interaction.deferReply();
 
         try {
-            // Lista de nomes japoneses aleatórios
             const nomes = [
                 "Sakura", "Yuki", "Hana", "Aoi", "Rin", "Mei", "Mio", "Yui", "Akari", "Nana",
                 "Koharu", "Hinata", "Ayaka", "Riko", "Sora", "Haruka", "Misaki", "Kaede", "Yuna", "Miyu",
@@ -20,7 +19,6 @@ module.exports = {
                 "Hotaru", "Kaori", "Madoka", "Nozomi", "Sayuri", "Tamaki", "Hitomi", "Megumi", "Chisato", "Kanon"
             ];
 
-            // Lista de sobrenomes japoneses aleatórios
             const sobrenomes = [
                 "Tanaka", "Sato", "Suzuki", "Takahashi", "Watanabe", "Ito", "Yamamoto", "Nakamura", "Kobayashi", "Kato",
                 "Yoshida", "Yamada", "Sasaki", "Yamaguchi", "Matsumoto", "Inoue", "Kimura", "Hayashi", "Shimizu", "Saito",
@@ -30,7 +28,6 @@ module.exports = {
                 "Nakagawa", "Watanuki", "Shirogane", "Hiiragi", "Kamiya", "Kousaka", "Izumi", "Minamoto", "Okazaki", "Kageyama"
             ];
 
-            // Personalidades absurdas
             const personalidades = [
                 "Fala apenas em emojis",
                 "Se comunica exclusivamente através de letras de anime",
@@ -78,7 +75,6 @@ module.exports = {
                 "Tem um sistema interno de classificação de pessoas por elementos (fogo, água, etc)"
             ];
 
-            // Hobbies estranhos
             const hobbies = [
                 "Colecionar poeira de diferentes países",
                 "Tricotar roupas para abacates",
@@ -128,7 +124,6 @@ module.exports = {
                 "Tirar selfies com sombras que parecem ter formas interessantes"
             ];
 
-            // Poder/habilidade especial absurda
             const poderes = [
                 "Pode transformar qualquer conversa em uma discussão sobre pão",
                 "Capaz de se comunicar com dispositivos eletrônicos quebrados",
@@ -178,7 +173,6 @@ module.exports = {
                 "Pode criar miniaturas vivas de si mesma que fazem o oposto do que ela manda"
             ];
 
-            // Características físicas estranhas
             const caracteristicas = [
                 "Cabelo que muda de cor conforme seu nível de fome",
                 "Olhos que brilham quando detectam mentiras sobre anime",
@@ -228,7 +222,6 @@ module.exports = {
                 "Seu reflexo em espelhos está sempre usando um cosplay diferente"
             ];
 
-            // Frase de efeito
             const frases = [
                 "Não é como se eu quisesse salvar o mundo ou algo assim... Baka!",
                 "Meu poder é 1% inspiração e 99% confusão aleatória!",
@@ -279,7 +272,6 @@ module.exports = {
                 "Não é questão de se eu vou fazer algo estranho, é questão de quando!"
             ];
 
-            // Gera uma waifu aleatória
             const nome = nomes[Math.floor(Math.random() * nomes.length)];
             const sobrenome = sobrenomes[Math.floor(Math.random() * sobrenomes.length)];
             const personalidade = personalidades[Math.floor(Math.random() * personalidades.length)];
@@ -288,12 +280,10 @@ module.exports = {
             const caracteristica = caracteristicas[Math.floor(Math.random() * caracteristicas.length)];
             const frase = frases[Math.floor(Math.random() * frases.length)];
 
-            // Busca imagem aleatória de waifu usando uma API
             const response = await fetch('https://api.waifu.pics/sfw/waifu');
             const data = await response.json();
             const imageUrl = data.url;
 
-            // Cria embed com as informações
             const embed = new EmbedBuilder()
                 .setColor(0xFF93F5)
                 .setTitle(`💕 ${nome} ${sobrenome}`)
