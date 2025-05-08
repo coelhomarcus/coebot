@@ -33,7 +33,7 @@ module.exports = {
                 .setTitle(`📜 Hoje na História: ${data.date}`)
                 .setDescription(`**${eventoAleatorio.year}**: ${eventoAleatorio.text}`)
                 .setFooter({
-                    text: `Fonte: History.muffinlabs.com • ${dia}/${mes}`
+                    text: `Fonte: history.muffinlabs.com • ${dia}/${mes}`
                 })
                 .setTimestamp();
 
