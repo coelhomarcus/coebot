@@ -3,7 +3,7 @@ const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('avatar')
-        .setDescription('🖼️ Mostra o avatar em tamanho grande')
+        .setDescription('🎨 Mostra o avatar em tamanho grande')
         .addUserOption(option =>
             option.setName('usuario')
                 .setDescription('Usuário para mostrar o avatar (opcional)')
