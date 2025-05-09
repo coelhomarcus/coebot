@@ -7,11 +7,11 @@ module.exports = {
         .setDescription('✨ Envia uma imagem aleatória de anime')
         .addStringOption(option =>
             option.setName('tipo')
-                .setDescription('Escolha entre conteúdo SFW ou NSFW')
+                .setDescription('Escolha entre imagem normal ou nsfw')
                 .setRequired(true)
                 .addChoices(
-                    { name: 'SFW', value: 'sfw' },
-                    { name: 'NSFW', value: 'nsfw' }
+                    { name: 'Normal 🌿', value: 'sfw' },
+                    { name: 'NSFW 🔞 ', value: 'nsfw' }
                 )),
 
     async execute(interaction) {

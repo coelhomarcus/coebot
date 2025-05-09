@@ -1,4 +1,4 @@
-const { Client, Events, GatewayIntentBits, Collection } = require('discord.js');
+const { Client, Events, GatewayIntentBits, Collection, ActivityType } = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
 const { token } = require('./config.json');
@@ -44,6 +44,12 @@ client.on(Events.InteractionCreate, async interaction => {
 
 client.once(Events.ClientReady, readyClient => {
     console.log(`Pronto! Logado como ${readyClient.user.tag}`);
+
+    readyClient.user.setPresence({
+        activities: [{ name: '🌿 /ajuda', type: ActivityType.Custom }],
+        status: 'online'
+    });
+
 });
 
 client.login(token);

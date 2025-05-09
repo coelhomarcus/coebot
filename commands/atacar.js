@@ -24,15 +24,10 @@ module.exports = {
 
             // Lista de frases para quando alguém ataca outra pessoa
             const frases = [
-                `${autor} atacou ${alvo} com toda força! 💥`,
-                `${autor} não teve piedade ao atacar ${alvo}! ⚔️`,
-                `Um ataque surpresa de ${autor} contra ${alvo}! 🔥`,
-                `${autor} desferiu um golpe poderoso em ${alvo}! 💢`,
-                `${alvo} foi atingido por um ataque de ${autor}! 💫`,
-                `${autor} avançou rapidamente e atacou ${alvo} 🗡️`,
+                `${autor} atacou ${alvo} 💥`,
+                `${autor} atacou ${alvo}! 💢`,
+                `${alvo} foi atacado por ${autor}! 💫`,
                 `A batalha começou! ${autor} atacou ${alvo}! ⚡`,
-                `${alvo} foi surpreendido(a) com um ataque de ${autor}! 💪`,
-                `Um ataque devastador de ${autor} contra ${alvo} 🥊`
             ];
 
             // Pega uma frase aleatória

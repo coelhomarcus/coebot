@@ -7,13 +7,13 @@ CoeBot é um bot de Discord multifuncional com diversos comandos de entretenimen
 O CoeBot oferece uma variedade de comandos divertidos e úteis:
 
 ### Informações
+- `/ajuda` - Exibe todos os comandos do bot
 - `/info-usuario` - Exibe informações detalhadas sobre um usuário
 - `/info-server` - Exibe informações sobre o servidor atual
-- `/github` - Busca informações sobre um repositório do GitHub
 - `/avatar` - Mostra o avatar em tamanho grande
-- `/marcus` - Mostra os sites do Marcus Coelho
 - `/curiosidade` - Mostra um fato inútil aleatório traduzido para português
 - `/conselho` - Receba um conselho sábio traduzido para português
+- Entre outros...
 
 ### Entretenimento
 - `/waifu` - Gera aleatoriamente uma waifu com imagem e características criativas
@@ -22,6 +22,7 @@ O CoeBot oferece uma variedade de comandos divertidos e úteis:
 - `/ler-mente` - Simula a leitura de pensamentos de um usuário
 - `/beijar` - Beija alguém do servidor com animação
 - `/atacar` - Ataca alguém do servidor com animação
+- Entre outros...
 
 ## Configuração
 
@@ -40,18 +41,7 @@ O CoeBot oferece uma variedade de comandos divertidos e úteis:
 
 ```
 ├── commands/            # Todos os comandos slash do bot
-│   ├── atacar.js        # Comando para atacar usuários
-│   ├── avatar.js        # Comando para exibir avatar
-│   ├── beijar.js        # Comando para beijar usuários
-│   ├── fato-inutil.js   # Exibe fatos inúteis traduzidos
-│   ├── github.js        # Busca informações de repositórios
-│   ├── info-server.js   # Informações do servidor
-│   ├── info-usuario.js  # Informações de usuários
-│   ├── ler-mente.js     # Simulação de leitura de mente
-│   ├── marcus.js        # Links relacionados ao Marcus
-│   ├── otakometro.js    # Medidor de nível otaku
-│   ├── randanime.js     # Imagens aleatórias de anime
-│   └── waifu.js         # Gerador de waifus personalizadas
+│   ├── *.js             # Comandos .js
 ├── rules/               # Documentação legal
 ├── config-template.json # Modelo para configuração
 ├── config.json          # Arquivo de configuração (precisa ser criado)

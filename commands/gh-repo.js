@@ -28,7 +28,7 @@ function getColorForLanguage(language) {
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('github')
+        .setName('gh-repo')
         .setDescription('🔍 Busca informações sobre um repositório do GitHub')
         .addStringOption(option =>
             option.setName('owner')
