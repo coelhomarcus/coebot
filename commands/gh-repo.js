@@ -85,23 +85,40 @@ module.exports = {
                 })
                 .addFields(
                     {
+                        name: '\u200B',
+                        value: ''
+                    },
+                    {
                         name: '',
                         value: `⭐ **${formatNumber(repoData.stargazers_count)}** Estrelas\n` +
                             `🍴 **${formatNumber(repoData.forks)}** Forks\n` +
                             `👁️ **${formatNumber(repoData.watchers)}** Observadores\n`
                     },
                     {
+                        name: '\u200B',
+                        value: ''
+                    },
+                    {
                         name: '💻 Linguagens',
                         value: topLanguages,
                         inline: false
+                    },
+                    {
+                        name: '\u200B',
+                        value: ''
                     }
                 );
 
             if (lastCommitDate) {
-                embed.addFields({
-                    name: '📝 Último commit',
-                    value: `\`${lastCommitMessage}\` - ${lastCommitDate.toLocaleDateString()}`
-                });
+                embed.addFields(
+                    {
+                        name: '📝 Último commit',
+                        value: `\`${lastCommitMessage}\` - ${lastCommitDate.toLocaleDateString()}`
+                    },
+                    {
+                        name: '\u200B',
+                        value: ''
+                    });
             }
 
             if (contributors.length > 0 && !repoResponse.message) {
@@ -110,10 +127,15 @@ module.exports = {
                     .map(c => `[${c.login}](${c.html_url}) (${c.contributions} commits)`)
                     .join('\n');
 
-                embed.addFields({
-                    name: '👥 Contribuidores',
-                    value: topContributors
-                });
+                embed.addFields(
+                    {
+                        name: '👥 Contribuidores',
+                        value: topContributors
+                    },
+                    {
+                        name: '\u200B',
+                        value: ''
+                    });
             }
 
             if (repoData.license) {

@@ -17,12 +17,10 @@ module.exports = {
             const alvo = interaction.options.getUser('alvo');
             const autor = interaction.user;
 
-            // Impedir que o usuário beije a si mesmo
             if (alvo.id === autor.id) {
                 return await interaction.editReply('❌ Você não pode beijar a si mesmo! Isso seria estranho...');
             }
 
-            // Lista de frases para quando alguém beija outra pessoa
             const frases = [
                 `${autor} deu um beijinho em ${alvo}! Que fofo! 💕`,
                 `${autor} não resistiu e beijou ${alvo}! 💋`,
@@ -35,33 +33,28 @@ module.exports = {
                 `Um beijo suave de ${autor} para ${alvo} 💗`
             ];
 
-            // Pega uma frase aleatória
             const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
 
-            // Busca uma imagem de beijo da API
             const response = await fetch(`https://nekos.life/api/v2/img/kiss`);
             const data = await response.json();
             const imageUrl = data.url;
 
-            // Define uma cor romântica para o embed
             const coresRomanticas = [
-                0xFF69B4, // rosa quente
-                0xFF1493, // rosa profundo
-                0xDB7093, // rosa médio
-                0xE91E63, // rosa material
-                0xF06292, // rosa claro
-                0xFF0000, // vermelho
-                0xE53935, // vermelho material
-                0xFF5252  // vermelho claro
+                0xFF69B4,
+                0xFF1493,
+                0xDB7093,
+                0xE91E63,
+                0xF06292,
+                0xFF0000,
+                0xE53935,
+                0xFF5252
             ];
             const corAleatoria = coresRomanticas[Math.floor(Math.random() * coresRomanticas.length)];
 
-            // Cria embed com a imagem e a frase
             const embed = new EmbedBuilder()
                 .setColor(corAleatoria)
                 .setDescription(`**${fraseAleatoria}**`)
                 .setImage(imageUrl)
-                .setFooter({ text: '💕 Que romântico!' });
 
             await interaction.editReply({ embeds: [embed] });
 

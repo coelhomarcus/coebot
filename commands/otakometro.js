@@ -112,15 +112,26 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor(cor)
-                .setTitle(`🔍 OTAKÔMETRO: ${targetUser.username}`)
-                .setDescription(`O otakômetro detectou **${porcentagemOtaku}%** de poder otaku!`)
+                .setTitle(`🔍 Otakômetro`)
+                .setDescription(`o <@${targetUser.id}> tem **${porcentagemOtaku}%** de poder otaku!`)
                 .setThumbnail(targetUser.displayAvatarURL({ dynamic: true }))
                 .addFields(
+                    {
+                        name: '\u200B',
+                        value: ''
+                    },
                     { name: '📊 CLASSIFICAÇÃO', value: `**${nivelAleatorio.titulo}**\n*${nivelAleatorio.descricao}*`, inline: false },
+                    {
+                        name: '\u200B',
+                        value: ''
+                    },
                     { name: '🔍 CARACTERÍSTICA DETECTADA', value: `• ${nivelAleatorio.caracteristica}`, inline: false },
+                    {
+                        name: '\u200B',
+                        value: ''
+                    },
                     { name: '✨ OBSERVAÇÃO ADICIONAL', value: `• ${fraseAleatoria}`, inline: false }
                 )
-                .setTimestamp();
 
             await interaction.editReply({ embeds: [embed] });
 

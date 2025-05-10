@@ -4,7 +4,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('curiosidade')
-        .setDescription('🤓 Mostra um fato inútil aleatório'),
+        .setDescription('🤓 Mostra uma curiosidade aleatória'),
 
     async execute(interaction) {
         await interaction.deferReply();
@@ -52,7 +52,7 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor(0x00FFAA)
-                .setTitle('🤓 Fato Inútil')
+                .setTitle('🤓 Curiosidade')
                 .setDescription(textoTraduzido)
 
             await interaction.editReply({

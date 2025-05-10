@@ -47,7 +47,9 @@ module.exports = {
         let totalComandos = 0;
         for (const categoria in categorias) {
             totalComandos += categorias[categoria].comandos.length;
-        } const embed = new EmbedBuilder()
+        }
+
+        const embed = new EmbedBuilder()
             .setColor(0x7CFC00)
             .setTitle('Lista de Comandos')
             .setFooter({ text: `Total de comandos: ${totalComandos}` });
@@ -58,10 +60,16 @@ module.exports = {
             const comandosLista = categoria.comandos
                 .map(cmd => `\`/${cmd.name}\` ➞ ${cmd.description}`)
                 .join('\n');
-            embed.addFields({
-                name: `${categoria.emoji} ${categoriaNome}`,
-                value: comandosLista
-            });
+            embed.addFields(
+                {
+                    name: `${categoria.emoji} ${categoriaNome}`,
+                    value: comandosLista
+                },
+                {
+                    name: '\u200B',
+                    value: ''
+                }
+            );
         }
 
         await interaction.editReply({ embeds: [embed] });

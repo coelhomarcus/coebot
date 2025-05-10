@@ -44,7 +44,7 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor(member?.displayColor || 0x5865F2)
-                .setTitle(`Informações de ${targetUser.username}`)
+                .setTitle(`Informações de ${targetUser.displayName}`)
                 .setThumbnail(targetUser.displayAvatarURL({ dynamic: true, size: 1024 }))
                 .addFields(
                     {

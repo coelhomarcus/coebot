@@ -289,9 +289,25 @@ module.exports = {
                 .setTitle(`💕 ${nome} ${sobrenome}`)
                 .setDescription(`*"${frase}"*`)
                 .addFields(
+                    {
+                        name: '\u200B',
+                        value: ''
+                    },
                     { name: '✨ Personalidade', value: personalidade, inline: false },
+                    {
+                        name: '\u200B',
+                        value: ''
+                    },
                     { name: '🎯 Hobby', value: hobby, inline: false },
+                    {
+                        name: '\u200B',
+                        value: ''
+                    },
                     { name: '💫 Poder Especial', value: poder, inline: false },
+                    {
+                        name: '\u200B',
+                        value: ''
+                    },
                     { name: '👀 Característica Única', value: caracteristica, inline: false }
                 )
                 .setImage(imageUrl)

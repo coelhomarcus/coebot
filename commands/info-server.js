@@ -51,9 +51,17 @@ module.exports = {
                         inline: false
                     },
                     {
+                        name: '\u200B',
+                        value: ''
+                    },
+                    {
                         name: '👥 Membros',
                         value: `**Total:** ${totalMembers}\n**Humanos:** ${humanCount}\n**Bots:** ${botCount}`,
                         inline: false
+                    },
+                    {
+                        name: '\u200B',
+                        value: ''
                     },
                     {
                         name: '💬 Canais',
@@ -61,8 +69,12 @@ module.exports = {
                         inline: false
                     },
                     {
+                        name: '\u200B',
+                        value: ''
+                    },
+                    {
                         name: '✨ Outros',
-                        value: `**Cargos:** ${roleCount}\n**Emojis:** ${regularEmojis + animatedEmojis} (${regularEmojis} normais, ${animatedEmojis} animados)\n**Impulsos:** ${boostCount} (${boostLevel})`,
+                        value: `**Cargos:** ${roleCount}\n**Emojis:** ${regularEmojis + animatedEmojis}\n**Impulsos:** ${boostCount} (${boostLevel})`,
                         inline: false
                     }
                 );

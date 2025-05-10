@@ -56,6 +56,10 @@ module.exports = {
                             `👥 **${formatNumber(userData.followers)}** Seguidores\n` +
                             `👤 **${formatNumber(userData.following)}** Seguindo`,
                         inline: false
+                    },
+                    {
+                        name: '\u200B',
+                        value: ''
                     }
                 );
 
@@ -63,16 +67,22 @@ module.exports = {
             const detailsArray = [];
             if (userData.company) detailsArray.push(`🏢 **Empresa**: ${userData.company}`);
             if (userData.location) detailsArray.push(`📍 **Localização**: ${userData.location}`);
-            if (userData.blog) detailsArray.push(`🔗 **Website**: [Link](${userData.blog.startsWith('http') ? userData.blog : 'https://' + userData.blog})`);
+            if (userData.blog) detailsArray.push(`🔗 [${userData.blog}](${userData.blog.startsWith('http') ? userData.blog : 'https://' + userData.blog})`);
             if (userData.twitter_username) detailsArray.push(`🐦 **Twitter**: [@${userData.twitter_username}](https://twitter.com/${userData.twitter_username})`);
             if (userData.email) detailsArray.push(`📧 **Email**: ${userData.email}`);
 
             if (detailsArray.length > 0) {
-                embed.addFields({
-                    name: '📝 Detalhes',
-                    value: detailsArray.join('\n'),
-                    inline: false
-                });
+                embed.addFields(
+                    {
+                        name: '📝 Detalhes',
+                        value: detailsArray.join('\n'),
+                        inline: false
+                    },
+                    {
+                        name: '\u200B',
+                        value: ''
+                    }
+                );
             }
 
             // Adicionar repositórios principais se disponíveis
@@ -81,11 +91,16 @@ module.exports = {
                     .map(repo => `[${repo.name}](${repo.html_url}) - ⭐ ${formatNumber(repo.stargazers_count)}`)
                     .join('\n');
 
-                embed.addFields({
-                    name: '🌟 Principais Repositórios',
-                    value: topRepos || 'Nenhum repositório encontrado',
-                    inline: false
-                });
+                embed.addFields(
+                    {
+                        name: '🌟 Principais Repositórios',
+                        value: topRepos || 'Nenhum repositório encontrado',
+                        inline: false
+                    },
+                    {
+                        name: '\u200B',
+                        value: ''
+                    });
             }
 
             // Adicionar últimas atividades se disponíveis
@@ -123,11 +138,17 @@ module.exports = {
                     })
                     .join('\n');
 
-                embed.addFields({
-                    name: '📅 Atividades Recentes',
-                    value: latestActivities || 'Nenhuma atividade recente',
-                    inline: false
-                });
+                embed.addFields(
+                    {
+                        name: '📅 Atividades Recentes',
+                        value: latestActivities || 'Nenhuma atividade recente',
+                        inline: false
+                    },
+                    {
+                        name: '\u200B',
+                        value: ''
+                    }
+                );
             }
 
             // Adicionar data de criação da conta
