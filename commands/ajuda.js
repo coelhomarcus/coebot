@@ -17,10 +17,11 @@ module.exports = {
                 ]
             },
             'Diversão': {
-                emoji: '😂',
+                emoji: '😺',
                 comandos: [
                     { name: 'atacar', description: 'Ataca outro usuário' },
                     { name: 'beijar', description: 'Beija outro usuário' },
+                    { name: 'jogo-aleatorio', description: 'Recebe uma recomendação de jogo aleatório' },
                     { name: 'conselho', description: 'Receba um conselho aleatório' },
                     { name: 'curiosidade', description: 'Exibe uma curiosidade aleatória' },
                     { name: 'ler-mente', description: 'Lê a mente de alguém' },
@@ -66,7 +67,7 @@ module.exports = {
                     value: comandosLista
                 },
                 {
-                    name: '\u200B',
+                    name: '\n',
                     value: ''
                 }
             );

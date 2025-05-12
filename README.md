@@ -16,6 +16,7 @@ O CoeBot oferece uma variedade de comandos divertidos e úteis:
 - Entre outros...
 
 ### Entretenimento
+- `/jogo-aleatorio` - Recebe uma recomendação de jogo aleatório
 - `/waifu` - Gera aleatoriamente uma waifu com imagem e características criativas
 - `/randanime` - Envia uma imagem aleatória de anime
 - `/otakometro` - Mede o nível de otaku de um usuário

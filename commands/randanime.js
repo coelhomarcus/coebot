@@ -40,13 +40,13 @@ module.exports = {
             const imageUrl = data.url;
 
             const coresPastel = [
-                0xFFB7B7, // rosa claro
-                0xFFDDB7, // pêssego
-                0xFFFFB7, // amarelo pastel
-                0xB7FFB7, // verde pastel
-                0xB7FFFF, // ciano pastel
-                0xB7B7FF, // azul pastel
-                0xFFB7FF  // lilás pastel
+                0xFFB7B7,
+                0xFFDDB7,
+                0xFFFFB7,
+                0xB7FFB7,
+                0xB7FFFF,
+                0xB7B7FF,
+                0xFFB7FF
             ];
             const corAleatoria = coresPastel[Math.floor(Math.random() * coresPastel.length)];
 

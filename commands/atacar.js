@@ -17,12 +17,10 @@ module.exports = {
             const alvo = interaction.options.getUser('alvo');
             const autor = interaction.user;
 
-            // Impedir que o usuário ataque a si mesmo
             if (alvo.id === autor.id) {
                 return await interaction.editReply('❌ Você não pode atacar a si mesmo! Isso seria estranho...');
             }
 
-            // Lista de frases para quando alguém ataca outra pessoa
             const frases = [
                 `${autor} atacou ${alvo} 💥`,
                 `${autor} atacou ${alvo}! 💢`,
@@ -30,28 +28,24 @@ module.exports = {
                 `A batalha começou! ${autor} atacou ${alvo}! ⚡`,
             ];
 
-            // Pega uma frase aleatória
             const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
 
-            // Busca uma imagem de ataque da API
             const response = await fetch(`https://api.waifu.pics/sfw/slap`);
             const data = await response.json();
             const imageUrl = data.url;
 
-            // Define uma cor para o embed
             const coresAtaque = [
-                0xFF0000, // vermelho
-                0xE53935, // vermelho material
-                0xFF5252, // vermelho claro
-                0xFFA500, // laranja
-                0xFD8C04, // laranja escuro
-                0x8B0000, // vermelho escuro
-                0x800000, // marrom avermelhado
-                0x9C27B0  // roxo
+                0xFF0000,
+                0xE53935,
+                0xFF5252,
+                0xFFA500,
+                0xFD8C04,
+                0x8B0000,
+                0x800000,
+                0x9C27B0
             ];
             const corAleatoria = coresAtaque[Math.floor(Math.random() * coresAtaque.length)];
 
-            // Cria embed com a imagem e a frase
             const embed = new EmbedBuilder()
                 .setColor(corAleatoria)
                 .setDescription(`**${fraseAleatoria}**`)

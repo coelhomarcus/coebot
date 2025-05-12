@@ -34,15 +34,12 @@ module.exports = {
 
             const userData = await userResponse.json();
 
-            // Buscar repositórios populares do usuário
             const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=stars&per_page=3`);
             const reposData = await reposResponse.json();
 
-            // Buscar atividade do usuário (eventos)
             const eventsResponse = await fetch(`https://api.github.com/users/${username}/events/public?per_page=5`);
             const eventsData = await eventsResponse.json();
 
-            // Criar embed com informações do usuário
             const embed = new EmbedBuilder()
                 .setColor(0x0099FF)
                 .setTitle(`👤 ${userData.name || userData.login}`)
@@ -63,7 +60,6 @@ module.exports = {
                     }
                 );
 
-            // Adicionar localização, empresa e website se disponíveis
             const detailsArray = [];
             if (userData.company) detailsArray.push(`🏢 **Empresa**: ${userData.company}`);
             if (userData.location) detailsArray.push(`📍 **Localização**: ${userData.location}`);
@@ -85,7 +81,6 @@ module.exports = {
                 );
             }
 
-            // Adicionar repositórios principais se disponíveis
             if (reposData.length > 0 && !reposResponse.message) {
                 const topRepos = reposData
                     .map(repo => `[${repo.name}](${repo.html_url}) - ⭐ ${formatNumber(repo.stargazers_count)}`)
@@ -103,7 +98,6 @@ module.exports = {
                     });
             }
 
-            // Adicionar últimas atividades se disponíveis
             if (eventsData.length > 0 && !eventsResponse.message) {
                 const latestActivities = eventsData
                     .slice(0, 3)
@@ -151,12 +145,10 @@ module.exports = {
                 );
             }
 
-            // Adicionar data de criação da conta
             embed.setFooter({
                 text: `Membro desde ${new Date(userData.created_at).toLocaleDateString()}`
             });
 
-            // Criar botões de ação
             const row = new ActionRowBuilder()
                 .addComponents(
                     new ButtonBuilder()
@@ -164,7 +156,7 @@ module.exports = {
                         .setURL(userData.html_url)
                         .setStyle(ButtonStyle.Link)
                         .setEmoji('👤')
-                );            // Adicionar botão para repositórios
+                );
             row.addComponents(
                 new ButtonBuilder()
                     .setLabel('Repositórios')

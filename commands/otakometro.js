@@ -96,15 +96,14 @@ module.exports = {
 
             const porcentagemOtaku = Math.floor(Math.random() * 100) + 1;
 
-            // Define cores baseadas no nível (do verde ao vermelho escuro conforme aumenta)
             const coresNiveis = [
-                0x4CBB17, // Verde
-                0x98FB98, // Verde claro
-                0xFFFF00, // Amarelo
-                0xFFA500, // Laranja
-                0xFF4500, // Laranja avermelhado
-                0xFF0000, // Vermelho
-                0x800080  // Roxo
+                0x4CBB17,
+                0x98FB98,
+                0xFFFF00,
+                0xFFA500,
+                0xFF4500,
+                0xFF0000,
+                0x800080
             ];
 
             const indiceNivel = Math.floor(porcentagemOtaku / 15);
