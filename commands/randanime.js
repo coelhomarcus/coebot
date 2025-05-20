@@ -10,15 +10,22 @@ module.exports = {
                 .setDescription('Escolha entre imagem normal ou nsfw')
                 .setRequired(true)
                 .addChoices(
-                    { name: 'Normal 🌿', value: 'sfw' },
-                    { name: 'NSFW 🔞 ', value: 'nsfw' }
-                )),
-
-    async execute(interaction) {
+                    { name: 'Normal', value: 'sfw' },
+                    { name: 'NSFW🔞 ', value: 'nsfw' }
+                )),    async execute(interaction) {
         await interaction.deferReply();
-
-        try {
+        
+        try {            
             const tipo = interaction.options.getString('tipo');
+            
+            if (tipo === 'nsfw') {
+                if (!interaction.channel || interaction.channel.type !== 0 || !interaction.channel.nsfw) {
+                    return interaction.editReply({
+                        content: '❌ Esse conteúdo só pode ser exibido em chats NSFW!',
+                        ephemeral: true
+                    });
+                }
+            }
 
             const sfwEndpoints = [
                 'waifu', 'neko', 'shinobu', 'megumin', 'bully', 'cuddle',

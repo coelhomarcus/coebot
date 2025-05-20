@@ -15,7 +15,7 @@ module.exports = {
 
             const randomPage = Math.floor(Math.random() * 500) + 1;
 
-            const response = await fetch(`https://api.rawg.io/api/games?key=${apiKey}&page=${randomPage}&page_size=20`);
+            const response = await fetch(`https://api.rawg.io/api/games?key=${apiKey}&page=${randomPage}&page_size=20&platforms=4&ordering=-rating`);
             const data = await response.json();
 
             const jogos = data.results;
