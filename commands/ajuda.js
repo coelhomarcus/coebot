@@ -8,23 +8,23 @@ module.exports = {
         await interaction.deferReply();
 
         const categorias = {
+            'Diversão': {
+                emoji: '😺',
+                comandos: [
+                    { name: 'atacar', description: 'Ataca outro usuário' },
+                    { name: 'beijar', description: 'Beija outro usuário' },
+                    { name: 'conselho', description: 'Receba um conselho aleatório' },
+                    { name: 'curiosidade', description: 'Exibe uma curiosidade aleatória' },
+                    { name: 'ler-mente', description: 'Lê a mente de alguém' },
+                    { name: 'jogo-aleatorio', description: 'Recebe uma recomendação de jogo aleatório' },
+                ]
+            },
             'Anime': {
                 emoji: '🍙',
                 comandos: [
                     { name: 'randanime', description: 'Exibe uma imagem aleatória de anime' },
                     { name: 'waifu', description: 'Cria uma waifu aleatória' },
                     { name: 'otakometro', description: 'Mede o nível de otaku' }
-                ]
-            },
-            'Diversão': {
-                emoji: '😺',
-                comandos: [
-                    { name: 'atacar', description: 'Ataca outro usuário' },
-                    { name: 'beijar', description: 'Beija outro usuário' },
-                    { name: 'jogo-aleatorio', description: 'Recebe uma recomendação de jogo aleatório' },
-                    { name: 'conselho', description: 'Receba um conselho aleatório' },
-                    { name: 'curiosidade', description: 'Exibe uma curiosidade aleatória' },
-                    { name: 'ler-mente', description: 'Lê a mente de alguém' },
                 ]
             },
             'Dev': {
@@ -44,7 +44,6 @@ module.exports = {
             }
         };
 
-        // Calcular o número total de comandos
         let totalComandos = 0;
         for (const categoria in categorias) {
             totalComandos += categorias[categoria].comandos.length;
@@ -55,7 +54,6 @@ module.exports = {
             .setTitle('Lista de Comandos')
             .setFooter({ text: `Total de comandos: ${totalComandos}` });
 
-        // Adicionar campos para cada categoria
         for (const categoriaNome in categorias) {
             const categoria = categorias[categoriaNome];
             const comandosLista = categoria.comandos

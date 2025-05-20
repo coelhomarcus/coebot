@@ -46,7 +46,7 @@ client.once(Events.ClientReady, readyClient => {
     console.log(`Pronto! Logado como ${readyClient.user.tag}`);
 
     readyClient.user.setPresence({
-        activities: [{ name: '🌿 /ajuda', type: ActivityType.Custom }],
+        activities: [{ name: '🐇 /ajuda', type: ActivityType.Custom }],
         status: 'online'
     });
 
