@@ -115,7 +115,7 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor(cor)
-                .setTitle('🎮 Gameômetro')
+                .setTitle('🎮 Gamômetro')
                 .setDescription(`<@${targetUser.id}> tem **${porcentagemGamer}%** de poder gamer! 🎯`)
                 .setThumbnail(targetUser.displayAvatarURL({ dynamic: true }))
                 .addFields(
