@@ -13,6 +13,7 @@ module.exports = {
                 comandos: [
                     { name: 'atacar', description: 'Ataca outro usuário' },
                     { name: 'beijar', description: 'Beija outro usuário' },
+                    { name: 'shipp', description: 'Calcula a compatibilidade entre dois usuários' },
                     { name: 'conselho', description: 'Receba um conselho aleatório' },
                     { name: 'curiosidade', description: 'Exibe uma curiosidade aleatória' },
                     { name: 'ler-mente', description: 'Lê a mente de alguém' },
