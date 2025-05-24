@@ -4,7 +4,7 @@ const { rawgKey } = require('../config.json');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('jogo-aleatorio')
+        .setName('randgame')
         .setDescription('🎮 Recebe uma recomendação de jogo aleatório'),
 
     async execute(interaction) {

@@ -23,10 +23,11 @@ module.exports = {
             'Anime/Games': {
                 emoji: '🍙',
                 comandos: [
+                    { name: 'otakometro', description: 'Mede o nível de Otaku' },
+                    { name: 'gamometro', description: 'Mede o nível Gamer' },
                     { name: 'randanime', description: 'Exibe uma imagem aleatória de anime' },
+                    { name: 'randgame', description: 'Recebe um jogo aleatório' },
                     { name: 'waifu', description: 'Cria uma waifu aleatória' },
-                    { name: 'otakometro', description: 'Mede o nível de otaku' },
-                    { name: 'jogo-aleatorio', description: 'Recebe uma recomendação de jogo aleatório' },
                 ]
             },
             'Dev': {
