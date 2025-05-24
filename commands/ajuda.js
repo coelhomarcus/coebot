@@ -11,21 +11,22 @@ module.exports = {
             'Diversão': {
                 emoji: '😺',
                 comandos: [
-                    { name: 'atacar', description: 'Ataca outro usuário' },
                     { name: 'beijar', description: 'Beija outro usuário' },
+                    { name: 'atacar', description: 'Ataca outro usuário' },
+                    { name: 'duelar', description: 'Duele com outro usuário' },
                     { name: 'shipp', description: 'Calcula a compatibilidade entre dois usuários' },
                     { name: 'conselho', description: 'Receba um conselho aleatório' },
                     { name: 'curiosidade', description: 'Exibe uma curiosidade aleatória' },
                     { name: 'ler-mente', description: 'Lê a mente de alguém' },
-                    { name: 'jogo-aleatorio', description: 'Recebe uma recomendação de jogo aleatório' },
                 ]
             },
-            'Anime': {
+            'Anime/Games': {
                 emoji: '🍙',
                 comandos: [
                     { name: 'randanime', description: 'Exibe uma imagem aleatória de anime' },
                     { name: 'waifu', description: 'Cria uma waifu aleatória' },
-                    { name: 'otakometro', description: 'Mede o nível de otaku' }
+                    { name: 'otakometro', description: 'Mede o nível de otaku' },
+                    { name: 'jogo-aleatorio', description: 'Recebe uma recomendação de jogo aleatório' },
                 ]
             },
             'Dev': {
